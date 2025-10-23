@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-        <title> Jonathan Havard Porfolio </title>
-    <body style="background-color: darkolivegreen;">
+<head>
+    <title> Jonathan Havard Porfolio </title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+        }
+        .container div {
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body style="background-color: darkolivegreen;">
             <h1 style="text-align: center; font-family: Lucida Sans, Lucida Sans Regular, Lucida Grande, Lucida Sans Unicode, Geneva, Verdana, sans-serif;">The Works of Jonathan Havard</h1>
                 <p style="text-align: center; font-size:200%;"><i>Welcome to Jonathan Havard's Portfolio website!</i></p>
                     <hr>
                     <div class="QuickAccess">
-                        <div>   
-                        <h2 style="font-family: Arial, Helvetica, sans-serif;">Contact: </h2>
-                        </div>
-                        <h2 style="font-family: Arial, Helvetica, sans-serif;">Portfolio:</h2>
-                        <h2 style="font-family: Arial, Helvetica, sans-serif;">Social Media:</h2>
-                        <h2 style="font-family: Arial, Helvetica, sans-serif;">About:</h2>
+                        <div class="container">
+                            <div><h2 style="font-family: Arial, Helvetica, sans-serif;"><a href="QuickAccess/Contact.html"></a>Contact: </h2></div>
+                            <div><h2 style="font-family: Arial, Helvetica, sans-serif;"><a href="QuickAccess/Portfolio.html"></a>Portfolio:</h2></div>
+                            <div><h2 style="font-family: Arial, Helvetica, sans-serif;"><a href="QuickAccess/SocialMedia.html"></a>Social Media:</h2></div>
+                            <div><h2 style="font-family: Arial, Helvetica, sans-serif;"><a href="QuickAccess/About.html"></a>About:</h2></div>
+                        </div>  
                     </div> 
                     <hr>
-            <h2 style="font-family: Arial, Helvetica, sans-serif;">My Publications:</h2>
+            <h2 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">My Publications:</h2>
             <div class="works">
-                <button style="font-size: 20px;"><a href="publication1.html"> Publication1 </a></button>
-                <button style="font-size: 20px;"><a href="publication2.html"> Publication2 </a></button>
-                <button style="font-size: 20px;"><a href="publication3.html"> Publication3 </a></button>
+                <div class="container">
+                    <button style="width: 250px; height: 500px; font-size: 20px;"><a href="Publications/publication1.html"> Publication1 </a></button>
+                    <button style="width: 250px; height: 500px; font-size: 20px;"><a href="Publications/publication2.html"> Publication2 </a></button>
+                    <button style="width: 250px; height: 500px; font-size: 20px;"><a href="Publications/publication3.html"> Publication3 </a></button>
+                 </div>
             </div>
 
     

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--The following code is for an image viewer, and was asisted by AI--> >
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #disp {width: 100%; height: auto; display: block}
+        .controls {margin: 20px;}
+    </style>
+        <div class ="controls">
+        <button>previous image</button>
+        <button>next image</button>
+</head>
+<body>
+    <img id="disp" src="../img/1.jpg">
+
+    </div>
+    <script>
+        let max;
+        max = 5;
+        let x;
+        x = 1;
+        const img = document.getElementById("disp");
+        function show(){
+            img.src = "../img/" + x + ".jpg";
+        }
+        document.querySelectorAll("button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                if (btn.textContent === "next image") {
+                    if (x <= max){
+                    x++;
+                    }
+                } 
+                if (btn.textContent === "previous image") {
+                    if (x>1){
+                    x--;
+                    }
+                }
+                show();
+            });
+        });
+    </script>
+
+

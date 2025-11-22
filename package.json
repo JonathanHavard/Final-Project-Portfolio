@@ -1,26 +1,16 @@
 {
   "name": "final-project-portfolio",
-  "type": "module",
-  "version": "1.0.0",
-  "description": "Jonathan Havard's final project repository for CRCP3320",
-  "main": "app.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
   "dependencies": {
-    "express": "^4.21.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JonathanHavard/Final-Project-Portfolio.git"
-  },
-  "author": "Jonathan Havard",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JonathanHavard/Final-Project-Portfolio/issues"
-  },
-  "homepage": "https://github.com/JonathanHavard/Final-Project-Portfolio#readme",
-  "devDependencies": {
-    "nodemon": "^3.1.10"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
   }
 }

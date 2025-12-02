@@ -10,7 +10,7 @@
 </head>
 
 <body style="background-image: none;">
-    <img id="disp" src="../img/1.jpg" class="center"> 
+    <img id="disp" src="/img/pub1/1.jpg" class="center"> 
     <div class="controls">
         <button id="prevBtn" style="width: 150px; height: 50px;">Previous image</button>
         <button id="nextBtn" style="width: 150px; height: 50px;">Next image</button>
@@ -33,7 +33,7 @@
         x = 1;
         const img = document.getElementById("disp");
         function show(){
-            img.src = "../img/" + x + ".jpg";
+            img.src = "/img/pub1/" + x + ".jpg";
         }
         
         // Use IDs for buttons instead of textContent to avoid localization/capitalization issues
@@ -51,6 +51,8 @@
     <script>
         // Key event listener code assisted by AI
     document.addEventListener('keydown', function(event) {
+        const keyInfo = document.getElementById('keyInfo');
+        if (keyInfo) keyInfo.textContent = `Key Down: ${event.key} (Code: ${event.code})`;
         if (event.key === 'ArrowRight') {
             if (x < max) {
                 x++;

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--The following code is for an image viewer, and was asisted by AI-->
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #disp {width: 692px; height: 923px; display: block; align-items: center;}
+        .controls {margin: 20px; display:flex; justify-content: center; gap: 10px;}
+    </style>
+</head>
+
+<body style="background-image: none;">
+    <img id="disp" src="/img/1.jpg" class="center"> 
+    <!-- Controls moved into body (head shouldn't contain interactive elements) -->
+    <div class="controls">
+        <button id="prevBtn" style="width: 150px; height: 50px;">Previous image</button>
+        <button id="nextBtn" style="width: 150px; height: 50px;">Next image</button>
+    </div>
+    <style>
+        #disp { width: 692px; height: 923px; display: block; align-items: center; }
+        .controls { margin: 20px; }
+
+        /* center the image, Placement assisted by AI */
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
+    <script>
+        let max = 5;
+        let x = 1;
+        const img = document.getElementById("disp");
+        function show(){
+            img.src = "/img/" + x + ".jpg";
+        }
+        // Use IDs for buttons instead of textContent to avoid localization/capitalization issues
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (x < max) x++;
+            show();
+        });
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (x > 1) x--;
+            show();
+        });
+    </script>
+    <script>
+        // Key event listener code assisted by AI
+    document.addEventListener('keydown', function(event) {
+        const keyInfo = document.getElementById('keyInfo');
+        if (keyInfo) keyInfo.textContent = `Key Down: ${event.key} (Code: ${event.code})`;
+        if (event.key === 'ArrowRight') {
+            if (x < max) {
+                x++;
+                show();
+            }
+        } else if (event.key === 'ArrowLeft') {
+            if (x > 1) {
+                x--;
+                show();
+            }
+        }
+    });
+
+    document.addEventListener('keyup', function(event) {
+    });
+    </script>
+</body>
+</html>

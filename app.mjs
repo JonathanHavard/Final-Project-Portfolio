@@ -15,7 +15,7 @@ const __dirname = path.dirname(__filename);
 // Serve static directories
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/QuickAccess', express.static(path.join(__dirname, 'QuickAccess')));
-app.use('/Publications', express.static(path.join(__dirname, 'Publications')));
+// Serve Publications as ejs views rather than static files, remove static serving to avoid accidental downloads
 app.use('/img', express.static(path.join(__dirname, 'img')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -67,6 +67,22 @@ app.get('/QuickAccess/About.ejs', (req, res) => {
   res.render('QuickAccess/About', { title: 'About', about });
 });
 app.get('/QuickAccess/About.html', (req, res) => res.redirect(301, '/QuickAccess/About.ejs'));
+
+// Publications - render EJS views for publications and offer redirects for compatibility
+app.get('/Publications/publication1', (req, res) => {
+  res.render('Publications/publication1', { title: 'Publication 1', name: 'Name' });
+});
+app.get('/Publications/publication1.ejs', (req, res) => res.redirect(301, '/Publications/publication1'));
+
+app.get('/Publications/publication2', (req, res) => {
+  res.render('Publications/publication2', { title: 'Publication 2', name: 'Name' });
+});
+app.get('/Publications/publication2.ejs', (req, res) => res.redirect(301, '/Publications/publication2'));
+
+app.get('/Publications/publication3', (req, res) => {
+  res.render('Publications/publication3', { title: 'Publication 3', name: 'Name' });
+});
+app.get('/Publications/publication3.ejs', (req, res) => res.redirect(301, '/Publications/publication3'));
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);

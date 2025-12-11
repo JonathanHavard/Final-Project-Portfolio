@@ -51,23 +51,12 @@ app.get('/', (req, res) => {
 app.get('/QuickAccess/Contact.ejs', (req, res) => {
   res.render('QuickAccess/Contact', { title: 'Contact', eMail, phoneNumber  });
 });
-app.get('/QuickAccess/Contact.html', (req, res) => res.redirect(301, '/QuickAccess/Contact.ejs'));
-
-app.get('/QuickAccess/Portfolio.ejs', (req, res) => {
-  res.render('QuickAccess/Portfolio', { title: 'Portfolio',});
-});
-app.get('/QuickAccess/Portfolio.html', (req, res) => res.redirect(301, '/QuickAccess/Portfolio.ejs'));
-
 app.get('/QuickAccess/SocialMedia.ejs', (req, res) => {
   res.render('QuickAccess/SocialMedia', { title: 'Social Media', socialMedia1, socialMedia2, socialMedia3  });
 });
-app.get('/QuickAccess/SocialMedia.html', (req, res) => res.redirect(301, '/QuickAccess/SocialMedia.ejs'));
-
 app.get('/QuickAccess/About.ejs', (req, res) => {
   res.render('QuickAccess/About', { title: 'About', about });
 });
-app.get('/QuickAccess/About.html', (req, res) => res.redirect(301, '/QuickAccess/About.ejs'));
-
 // Publications - render EJS views for publications and offer redirects for compatibility
 app.get('/Publications/publication1', (req, res) => {
   res.render('Publications/publication1', { title: 'Publication 1', name: 'Name' });
